@@ -1,0 +1,32 @@
+import initTranslations from '@/app/i18n';
+import i18nConfig from '@/i18nConfig';
+import TranslationsProvider from "@/components/TranslationProvider";
+
+const i18nNamespaces = ['common'];
+export default async function Home({
+                                     params: { locale },
+                                   }: {
+  params: { locale: string };
+}) {
+  const { t, resources } = await initTranslations(locale, i18nNamespaces);
+
+  return (
+    <TranslationsProvider
+      locale={locale}
+      namespaces={i18nNamespaces}
+      resources={resources}
+    >
+      <main className='flex min-h-screen flex-col items-center justify-between p-24'>
+        <div className='text-center text-2xl'>{t('welcome')}</div>
+        <div className='text-center'>
+          entropiefestival Homepage
+          <div>Locale: {locale}</div>
+        </div>
+      </main>
+    </TranslationsProvider>
+  );
+}
+
+export function generateStaticParams() {
+  return i18nConfig.locales.map((locale) => ({ locale }));
+}
