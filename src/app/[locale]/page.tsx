@@ -10,7 +10,7 @@ export default async function Home({
   params: { locale: string };
 }) {
   const { t, resources } = await initTranslations(locale, i18nNamespaces);
-  const upcomingEventData = getUpcomingEventData(locale);
+  const upcomingEventData = await getUpcomingEventData(locale);
   console.log(JSON.stringify(upcomingEventData, null, 2));
 
   return (

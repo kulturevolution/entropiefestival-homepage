@@ -17,7 +17,12 @@ export async function getEventData(id: number, locale :string) : Promise<object>
   });
 
   const result = await response.json();
-  console.log(JSON.stringify(result, null, 2));
+  return {
+    ...result.data.attributes,
+    id: result.data.id,
+    background_landscape: result.data.attributes?.background_landscape?.data?.attributes?.url,
+    background_portrait: result.data.attributes?.background_portrait?.data?.attributes?.url,
+  }
 }
 
 export async function getUpcomingEventData(locale: string) : Promise<object> {
