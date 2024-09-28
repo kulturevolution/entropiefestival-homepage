@@ -4,6 +4,7 @@ import React from "react";
 import {getUpcomingEventData} from "@/cms/event";
 import Image from "next/image";
 import {getImageSrc} from "@/cms/utils";
+import Header from "@/components/layout/Header";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,6 +24,7 @@ export default async function RootLayout({
       <body>
         <Image src={getImageSrc(upcomingEventData?.background_portrait)} alt="" fill={true} className="!fixed lg:hidden object-cover"/>
         <Image src={getImageSrc(upcomingEventData?.background_landscape)} alt="" fill={true} className="hidden lg:!fixed lg:block object-cover"/>
+        <Header locale={locale}/>
         <div className="relative">
           {children}
         </div>
