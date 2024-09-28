@@ -1,12 +1,12 @@
 import initTranslations from '@/app/i18n';
 import i18nConfig from '@/i18nConfig';
-import TranslationsProvider from "@/components/TranslationProvider";
-import {getUpcomingEventData} from "@/cms/event";
+import TranslationsProvider from '@/components/TranslationProvider';
+import { getUpcomingEventData } from '@/cms/event';
 
 const i18nNamespaces = ['common'];
 export default async function Home({
-                                     params: { locale },
-                                   }: {
+  params: { locale },
+}: {
   params: { locale: string };
 }) {
   const { t, resources } = await initTranslations(locale, i18nNamespaces);

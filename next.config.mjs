@@ -7,9 +7,9 @@ const nextConfig = {
         hostname: 'cms.entropiefestival.de',
         port: '',
         pathname: '/uploads/**',
-      }
-    ]
-  }
+      },
+    ],
+  },
 };
 
 export default nextConfig;

@@ -6,11 +6,11 @@ import initTranslations from '@/app/i18n';
 import { Resource, createInstance } from 'i18next';
 
 export default function TranslationsProvider({
-                                               children,
-                                               locale,
-                                               namespaces,
-                                               resources,
-                                             }: {
+  children,
+  locale,
+  namespaces,
+  resources,
+}: {
   children: ReactNode;
   locale: string;
   namespaces: string[];
