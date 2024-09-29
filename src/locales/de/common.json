@@ -1,3 +1,16 @@
 {
-  "welcome": "Willkommen!"
+  "welcome": "Willkommen!",
+  "mainMenu": {
+    "tickets": "Tickets",
+    "program": "Programm",
+    "faq": "Fragen",
+    "archive": "Archiv",
+    "contact": "Kontakt",
+    "imprint": "Impressum",
+    "terms": "AGB",
+    "language": {
+      "de": "deutsch",
+      "en": "english"
+    }
+  }
 }

@@ -11,13 +11,15 @@
     "format:fix": "prettier --write --ignore-path .gitignore ."
   },
   "dependencies": {
+    "classnames": "^2.5.1",
     "i18next": "^23.15.1",
     "i18next-resources-to-backend": "^1.2.1",
     "next": "14.2.11",
     "next-i18n-router": "^5.5.1",
     "react": "^18",
     "react-dom": "^18",
-    "react-i18next": "^15.0.2"
+    "react-i18next": "^15.0.2",
+    "zustand": "^5.0.0-rc.2"
   },
   "devDependencies": {
     "@types/node": "^20",

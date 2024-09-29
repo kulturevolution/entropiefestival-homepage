@@ -5,6 +5,11 @@ import { getUpcomingEventData } from '@/cms/event';
 import Image from 'next/image';
 import { getImageSrc } from '@/cms/utils';
 import Header from '@/components/layout/Header';
+import MainMenu from '@/components/layout/MainMenu';
+import initTranslations from '@/app/i18n';
+import TranslationsProvider from '@/components/TranslationProvider';
+
+const i18nNamespaces = ['common'];
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,24 +24,32 @@ export default async function RootLayout({
   params: { locale };
 }>) {
   const upcomingEventData = await getUpcomingEventData(locale);
+  const { t, resources } = await initTranslations(locale, i18nNamespaces);
   return (
-    <html lang='en'>
-      <body>
-        <Image
-          src={getImageSrc(upcomingEventData?.background_portrait)}
-          alt=''
-          fill={true}
-          className='!fixed object-cover lg:hidden'
-        />
-        <Image
-          src={getImageSrc(upcomingEventData?.background_landscape)}
-          alt=''
-          fill={true}
-          className='hidden object-cover lg:!fixed lg:block'
-        />
-        <Header locale={locale} />
-        <div className='relative'>{children}</div>
-      </body>
-    </html>
+    <TranslationsProvider
+      locale={locale}
+      namespaces={i18nNamespaces}
+      resources={resources}
+    >
+      <html lang='en'>
+        <body>
+          <Image
+            src={getImageSrc(upcomingEventData?.background_portrait)}
+            alt=''
+            fill={true}
+            className='!fixed object-cover lg:hidden'
+          />
+          <Image
+            src={getImageSrc(upcomingEventData?.background_landscape)}
+            alt=''
+            fill={true}
+            className='hidden object-cover lg:!fixed lg:block'
+          />
+          <Header locale={locale} />
+          <MainMenu locale={locale} />
+          <div className='relative'>{children}</div>
+        </body>
+      </html>
+    </TranslationsProvider>
   );
 }
