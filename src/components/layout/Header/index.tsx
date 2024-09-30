@@ -8,7 +8,7 @@ import MenuOpen from '@/components/gfx/MenuOpen';
 import LogoSmall from '@/components/gfx/LogoSmall';
 import { useMainMenuStore } from '@/zustand/mainMenuStore';
 
-const Header = ({ locale }) => {
+const Header: React.FC<{ locale: string }> = ({ locale }) => {
   const { setMenu } = useMainMenuStore();
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
 

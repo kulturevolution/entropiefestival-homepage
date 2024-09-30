@@ -7,8 +7,9 @@ import Instagram from '@/components/gfx/Instagram';
 import { useTranslation } from 'react-i18next';
 import { useMainMenuStore } from '@/zustand/mainMenuStore';
 import classNames from 'classnames';
+import React from 'react';
 
-const MainMenu = ({ locale }) => {
+const MainMenu: React.FC<{ locale: string }> = ({ locale }) => {
   const { menuOpen } = useMainMenuStore();
   const { t } = useTranslation(['common']);
 
