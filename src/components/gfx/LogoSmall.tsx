@@ -1,4 +1,6 @@
-const LogoSmall = ({ className }) => (
+import React from 'react';
+
+const LogoSmall: React.FC<{ className?: string }> = ({ className }) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width='78.83'

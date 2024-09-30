@@ -1,4 +1,6 @@
-const Instagram = ({ className }) => (
+import React from 'react';
+
+const Instagram: React.FC<{ className?: string }> = ({ className }) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width='25.173'

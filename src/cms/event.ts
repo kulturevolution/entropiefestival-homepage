@@ -12,10 +12,7 @@ export async function getUpcomingEventId(locale: string): Promise<number> {
   return result?.data?.attributes?.upcoming_event?.data?.id;
 }
 
-export async function getEventData(
-  id: number,
-  locale: string
-): Promise<any> {
+export async function getEventData(id: number, locale: string): Promise<any> {
   const response = await fetch(
     `${process.env.NEXT_CMS_API}/events/${id}?populate=event_location,event_type,image,info,background_landscape,background_portrait&locale=${locale}`,
     {
