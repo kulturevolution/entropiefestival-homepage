@@ -2,7 +2,7 @@ import { create } from 'zustand';
 
 interface MainMenuStore {
   menuOpen: boolean;
-  setMenu: (menuOpen) => void;
+  setMenu: (menuOpen: boolean) => void;
 }
 
 const useMainMenuStore = create<MainMenuStore>((set) => ({
