@@ -15,7 +15,7 @@ export async function getUpcomingEventId(locale: string): Promise<number> {
 export async function getEventData(
   id: number,
   locale: string
-): Promise<unknown> {
+): Promise<any> {
   const response = await fetch(
     `${process.env.NEXT_CMS_API}/events/${id}?populate=event_location,event_type,image,info,background_landscape,background_portrait&locale=${locale}`,
     {
@@ -36,7 +36,7 @@ export async function getEventData(
   };
 }
 
-export async function getUpcomingEventData(locale: string): Promise<unknown> {
+export async function getUpcomingEventData(locale: string): Promise<any> {
   const upcomingEventId = await getUpcomingEventId(locale);
   if (upcomingEventId) {
     return await getEventData(upcomingEventId, locale);
