@@ -14,7 +14,7 @@ const Header: React.FC<{ locale: string }> = ({ locale }) => {
 
   useEffect(() => {
     setMenu(menuOpen);
-  }, [menuOpen]);
+  }, [menuOpen, setMenu]);
 
   return (
     <div className='relative z-30 mx-5 my-6 flex items-center gap-x-2 lg:fixed lg:mx-16 lg:my-16'>
