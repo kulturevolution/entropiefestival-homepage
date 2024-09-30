@@ -17,7 +17,7 @@ const Header = ({ locale }) => {
   }, [menuOpen]);
 
   return (
-    <div className='relative mx-5 my-6 flex items-center gap-x-2 lg:fixed lg:mx-16 lg:my-16'>
+    <div className='relative z-30 mx-5 my-6 flex items-center gap-x-2 lg:fixed lg:mx-16 lg:my-16'>
       <Link href={`/${locale}`}>
         <LogoFull className='lg:hidden' />
         <LogoSmall className='hidden lg:block' />
