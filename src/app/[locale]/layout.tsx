@@ -21,7 +21,7 @@ export default async function RootLayout({
   params: { locale },
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale };
+  params: { locale: string };
 }>) {
   const upcomingEventData = await getUpcomingEventData(locale);
   const { t, resources } = await initTranslations(locale, i18nNamespaces);
