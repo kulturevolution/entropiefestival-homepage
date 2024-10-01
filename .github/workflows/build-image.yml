@@ -9,6 +9,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     environment: production
+    env:
+      NEXT_CMS_API: ${{ vars.NEXT_CMS_API }}
+      NEXT_PUBLIC_CMS_UPLOADS: ${{ vars.NEXT_PUBLIC_CMS_UPLOADS }}
+      NEXT_CMS_TOKEN: ${{ secrets.NEXT_CMS_TOKEN }}
 
     steps:
       # Checkout the repository
@@ -30,10 +34,6 @@ jobs:
       # Build and push the Docker image to GHCR
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
-        env:
-          NEXT_CMS_API: ${{ vars.NEXT_CMS_API }}
-          NEXT_PUBLIC_CMS_UPLOADS: ${{ vars.NEXT_PUBLIC_CMS_UPLOADS }}
-          NEXT_CMS_TOKEN: ${{ secrets.NEXT_CMS_TOKEN }}
         with:
           context: .
           push: true
