@@ -40,3 +40,7 @@ jobs:
           tags: ghcr.io/kulturevolution/entropiefestival-homepage/entropiefestival-homepage:latest, ghcr.io/kulturevolution/entropiefestival-homepage/entropiefestival-homepage:${{ github.sha }}
           # Du kannst zusätzliche Tags hinzufügen, wie z.B. den Commit SHA
           # tags: ghcr.io/your-github-username/your-image-name:latest, ghcr.io/your-github-username/your-image-name:${{ github.sha }}
+          build-args: |
+            NEXT_CMS_API=${{ env.NEXT_CMS_API }}
+            NEXT_PUBLIC_CMS_UPLOADS=${{ env.NEXT_PUBLIC_CMS_UPLOADS }}
+            NEXT_CMS_TOKEN=${{ env.NEXT_CMS_TOKEN }}
