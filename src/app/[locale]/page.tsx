@@ -4,6 +4,7 @@ import TranslationsProvider from '@/components/TranslationProvider';
 import { getUpcomingEventData } from '@/cms/event';
 import type { Metadata } from 'next';
 import { formatDateRange, getImageSrc } from '@/cms/utils';
+import { Fragment } from 'react';
 
 const i18nNamespaces = ['common'];
 
@@ -34,12 +35,13 @@ export default async function Home({
             alt={upcomingEventData?.title}
             className='max-h-[250px] max-w-[60%] object-contain'
           />
-          <div className='font-light tracking-[0.05em] lg:text-[42px]/[41px]'>
+          <div className='text-center font-light tracking-[0.05em] md:text-[24px]/[23px] lg:text-[42px]/[41px]'>
             {formatDateRange(
               new Date(upcomingEventData?.date_from),
               new Date(upcomingEventData?.date_to)
             )}
-            {' @ '}
+            {' @'}
+            <Fragment>&nbsp;</Fragment>
             {upcomingEventData?.event_location}
           </div>
         </div>
