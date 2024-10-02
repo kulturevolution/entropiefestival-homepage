@@ -3,6 +3,7 @@ import i18nConfig from '@/i18nConfig';
 import TranslationsProvider from '@/components/TranslationProvider';
 import { getUpcomingEventData } from '@/cms/event';
 import type { Metadata } from 'next';
+import { formatDateRange, getImageSrc } from '@/cms/utils';
 
 const i18nNamespaces = ['common'];
 
@@ -17,7 +18,7 @@ export default async function Home({
   params: { locale: string };
 }) {
   const { t, resources } = await initTranslations(locale, i18nNamespaces);
-  //const upcomingEventData = await getUpcomingEventData(locale);
+  const upcomingEventData = await getUpcomingEventData(locale);
   //console.log(JSON.stringify(upcomingEventData, null, 2));
 
   return (
@@ -26,11 +27,21 @@ export default async function Home({
       namespaces={i18nNamespaces}
       resources={resources}
     >
-      <main className='flex min-h-screen flex-col items-center justify-between p-24'>
-        <div className='text-center text-2xl'>{t('welcome')}</div>
-        <div className='text-center'>
-          entropiefestival Homepage
-          <div>Locale: {locale}</div>
+      <main className=''>
+        <div className='flex flex-col items-center'>
+          <img
+            src={getImageSrc(upcomingEventData?.image)}
+            alt={upcomingEventData?.title}
+            className='max-h-[250px] max-w-[60%] object-contain'
+          />
+          <div className='font-light tracking-[0.05em] lg:text-[42px]/[41px]'>
+            {formatDateRange(
+              new Date(upcomingEventData?.date_from),
+              new Date(upcomingEventData?.date_to)
+            )}
+            {' @ '}
+            {upcomingEventData?.event_location}
+          </div>
         </div>
       </main>
     </TranslationsProvider>

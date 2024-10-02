@@ -46,7 +46,7 @@ const MainMenu: React.FC<{ locale: string }> = ({ locale }) => {
       </div>
       <div className='mt-8 lg:hidden'>
         <a
-          href='https://entropiefestival.de/podcast'
+          href='https://soundcloud.com/entropiefestival/sets/entropiecast'
           target='_blank'
           rel='noopener noreferrer'
         >

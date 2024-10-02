@@ -23,7 +23,7 @@ const ContentContainer: React.FC<{ children: any }> = ({ children }) => {
       )}
       onClick={handleClick}
     >
-      <div className='bg-white text-gray-700'>{children}</div>
+      <div>{children}</div>
     </div>
   );
 };

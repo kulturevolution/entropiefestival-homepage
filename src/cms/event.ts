@@ -26,6 +26,9 @@ export async function getEventData(id: number, locale: string): Promise<any> {
   return {
     ...result.data.attributes,
     id: result.data.id,
+    event_location:
+      result.data.attributes?.event_location?.data?.attributes?.name,
+    image: result.data.attributes?.image?.data?.attributes?.url,
     background_landscape:
       result.data.attributes?.background_landscape?.data?.attributes?.url,
     background_portrait:

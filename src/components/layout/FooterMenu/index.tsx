@@ -21,7 +21,7 @@ const FooterMenu: React.FC<{ locale: string }> = ({ locale }) => {
         <Instagram />
       </a>
       <a
-        href='https://entropiefestival.de/podcast'
+        href='https://soundcloud.com/entropiefestival/sets/entropiecast'
         target='_blank'
         rel='noopener noreferrer'
       >
