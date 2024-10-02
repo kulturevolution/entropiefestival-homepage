@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next';
 import { useMainMenuStore } from '@/zustand/mainMenuStore';
 import classNames from 'classnames';
 import React from 'react';
+import Podcast from '@/components/gfx/Podcast';
 
 const MainMenu: React.FC<{ locale: string }> = ({ locale }) => {
   const { menuOpen } = useMainMenuStore();
@@ -45,7 +46,16 @@ const MainMenu: React.FC<{ locale: string }> = ({ locale }) => {
           </Link>
         ))}
       </div>
-      <div className='mt-8 flex gap-x-6 lg:hidden'>
+      <div className='mt-8 lg:hidden'>
+        <a
+          href='https://entropiefestival.de/podcast'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <Podcast />
+        </a>
+      </div>
+      <div className='mt-3 flex gap-x-6 lg:hidden'>
         <a
           href='https://facebook.com/entropiefestival'
           target='_blank'
