@@ -9,6 +9,7 @@ import MainMenu from '@/components/layout/MainMenu';
 import initTranslations from '@/app/i18n';
 import TranslationsProvider from '@/components/TranslationProvider';
 import FooterMenu from '@/components/layout/FooterMenu';
+import ContentContainer from '@/components/layout/ContentContainer';
 
 const i18nNamespaces = ['common'];
 
@@ -49,7 +50,7 @@ export default async function RootLayout({
           <Header locale={locale} />
           <MainMenu locale={locale} />
           <FooterMenu locale={locale} />
-          <div className='relative'>{children}</div>
+          <ContentContainer>{children}</ContentContainer>
         </body>
       </html>
     </TranslationsProvider>
