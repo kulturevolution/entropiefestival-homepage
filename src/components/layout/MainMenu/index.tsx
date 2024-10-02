@@ -9,6 +9,7 @@ import { useMainMenuStore } from '@/zustand/mainMenuStore';
 import classNames from 'classnames';
 import React from 'react';
 import Podcast from '@/components/gfx/Podcast';
+import MenuItem from '@/components/layout/MainMenu/MenuItem';
 
 const MainMenu: React.FC<{ locale: string }> = ({ locale }) => {
   const { menuOpen } = useMainMenuStore();
@@ -23,13 +24,11 @@ const MainMenu: React.FC<{ locale: string }> = ({ locale }) => {
     >
       <div className='mb-6 flex flex-col gap-y-6'>
         {['tickets', 'program', 'faq', 'archive'].map((slug, sI) => (
-          <Link
+          <MenuItem
             href={`/${locale}/${slug}`}
+            title={t(`mainMenu.${slug}`)}
             key={sI}
-            className='text-[25px]/[36px] font-light tracking-[0.071em] text-white'
-          >
-            {t(`mainMenu.${slug}`)}
-          </Link>
+          />
         ))}
       </div>
       <div className='mt-auto'>
@@ -37,13 +36,12 @@ const MainMenu: React.FC<{ locale: string }> = ({ locale }) => {
       </div>
       <div className='mt-4 flex flex-col gap-y-4'>
         {['contact', 'imprint', 'terms'].map((slug, sI) => (
-          <Link
+          <MenuItem
             href={`/${locale}/${slug}`}
+            title={t(`mainMenu.${slug}`)}
             key={sI}
-            className='text-[12px]/[18px] font-medium tracking-[0.008em] text-white'
-          >
-            {t(`mainMenu.${slug}`)}
-          </Link>
+            level='secondary'
+          />
         ))}
       </div>
       <div className='mt-8 lg:hidden'>
