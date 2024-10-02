@@ -5,7 +5,13 @@ import { useMainMenuStore } from '@/zustand/mainMenuStore';
 import classNames from 'classnames';
 
 const ContentContainer: React.FC<{ children: any }> = ({ children }) => {
-  const { menuOpen } = useMainMenuStore();
+  const { menuOpen, setMenu } = useMainMenuStore();
+
+  const handleClick = () => {
+    if (menuOpen) {
+      setMenu(false);
+    }
+  };
 
   return (
     <div
@@ -15,6 +21,7 @@ const ContentContainer: React.FC<{ children: any }> = ({ children }) => {
           ? '-left-[calc(100%-85px)] opacity-40 blur-sm lg:left-0 lg:opacity-100 lg:blur-none'
           : 'left-0'
       )}
+      onClick={handleClick}
     >
       <div className='bg-white text-gray-700'>{children}</div>
     </div>

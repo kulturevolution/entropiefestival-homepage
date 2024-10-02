@@ -14,6 +14,11 @@ const Header: React.FC<{ locale: string }> = ({ locale }) => {
 
   useEffect(() => {
     setMenu(menuOpen);
+    if (menuOpen) {
+      document.body.classList.add('overflow-hidden', 'lg:overflow-auto');
+    } else {
+      document.body.classList.remove('overflow-hidden', 'lg:overflow-auto');
+    }
   }, [menuOpen, setMenu]);
 
   return (
