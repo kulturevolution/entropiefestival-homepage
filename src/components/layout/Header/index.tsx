@@ -9,8 +9,7 @@ import LogoSmall from '@/components/gfx/LogoSmall';
 import { useMainMenuStore } from '@/zustand/mainMenuStore';
 
 const Header: React.FC<{ locale: string }> = ({ locale }) => {
-  const { setMenu } = useMainMenuStore();
-  const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const { menuOpen, setMenu } = useMainMenuStore();
 
   useEffect(() => {
     setMenu(menuOpen);
@@ -27,10 +26,7 @@ const Header: React.FC<{ locale: string }> = ({ locale }) => {
         <LogoFull className='lg:hidden' />
         <LogoSmall className='hidden lg:block' />
       </Link>
-      <button
-        onClick={() => setMenuOpen(!menuOpen)}
-        className='ml-auto lg:hidden'
-      >
+      <button onClick={() => setMenu(!menuOpen)} className='ml-auto lg:hidden'>
         {menuOpen ? <MenuClose /> : <MenuOpen />}
       </button>
     </div>
