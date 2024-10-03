@@ -32,8 +32,8 @@ export default async function Home({
       namespaces={i18nNamespaces}
       resources={resources}
     >
-      <main className=''>
-        <div className='flex flex-col items-center'>
+      <main>
+        <div className='-mt-24 flex h-screen flex-col items-center justify-center pl-6 lg:-mt-32 lg:pl-0'>
           <img
             src={getImageSrc(upcomingEventData?.image)}
             alt={upcomingEventData?.title}
@@ -49,16 +49,6 @@ export default async function Home({
             {upcomingEventData?.event_location}
           </div>
         </div>
-        <PageContentBox className='mt-12 lg:mt-24'>
-          <h2 className="relative text-2xl font-black italic tracking-[0.019em] [text-align-last:right] before:absolute before:-left-3 before:top-0 before:content-['\201E'] after:absolute after:-right-3 after:bottom-0 after:content-['\201C'] lg:text-[89px]/[86px] lg:before:-left-10 lg:after:-right-10">
-            {upcomingEventData?.claim}
-          </h2>
-          {upcomingEventData?.info ? (
-            <div className='mt-6 tracking-[0.019em] lg:mt-10 lg:text-[18px]/[25px]'>
-              <StrapiRichtext content={upcomingEventData?.info} />
-            </div>
-          ) : null}
-        </PageContentBox>
       </main>
     </TranslationsProvider>
   );

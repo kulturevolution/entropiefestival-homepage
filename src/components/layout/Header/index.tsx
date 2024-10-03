@@ -21,7 +21,7 @@ const Header: React.FC<{ locale: string }> = ({ locale }) => {
   }, [menuOpen, setMenu]);
 
   return (
-    <div className='relative z-30 mx-5 my-6 flex items-center gap-x-2 lg:fixed lg:mx-16 lg:my-16'>
+    <div className='absolute left-0 right-0 z-30 mx-5 my-6 flex items-center gap-x-2 lg:fixed lg:mx-16 lg:my-16'>
       <Link href={`/${locale}`}>
         <LogoFull className='lg:hidden' />
         <LogoSmall className='hidden lg:block' />
