@@ -4,8 +4,7 @@ import TranslationsProvider from '@/components/TranslationProvider';
 import { getUpcomingEventData } from '@/cms/event';
 import type { Metadata } from 'next';
 import PageContentBox from '@/components/layout/PageContentBox';
-import Script from 'next/script';
-import { getDomain } from '@/cms/utils';
+import PretixWidget from '@/components/layout/Ticketing/PretixWidget';
 
 const i18nNamespaces = ['common'];
 
@@ -32,39 +31,12 @@ export default async function Tickets({
       resources={resources}
     >
       <main>
+        <h2 className='-mb-4 ml-8 text-[80px]/[80px] font-black text-white lg:-mb-16 lg:ml-16 lg:text-[280px]/[280px]'>
+          TIX
+        </h2>
         <PageContentBox>
           {upcomingEventData?.ticket_shop_url ? (
-            <div>
-              <Script
-                src={`${getDomain(upcomingEventData?.ticket_shop_url)}widget/v1.de-informal.js`}
-                strategy='afterInteractive'
-              />
-              <link
-                rel='stylesheet'
-                type='text/css'
-                href={`${upcomingEventData?.ticket_shop_url}widget/v1.css`}
-              />
-              <pretix-widget
-                event={upcomingEventData?.ticket_shop_url}
-                skip-ssl-check
-              ></pretix-widget>
-              <noscript>
-                <div className='pretix-widget'>
-                  <div className='pretix-widget-info-message'>
-                    JavaScript ist in Ihrem Browser deaktiviert. Um unseren
-                    Ticket-Shop ohne JavaScript aufzurufen, klicken Sie bitte{' '}
-                    <a
-                      target='_blank'
-                      rel='noopener'
-                      href={upcomingEventData?.ticket_shop_url}
-                    >
-                      hier
-                    </a>
-                    .
-                  </div>
-                </div>
-              </noscript>
-            </div>
+            <PretixWidget url={upcomingEventData?.ticket_shop_url} />
           ) : null}
         </PageContentBox>
       </main>
