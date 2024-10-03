@@ -1,10 +1,12 @@
-import initTranslations from '@/app/i18n';
+//import initTranslations from '@/app/i18n';
 import i18nConfig from '@/i18nConfig';
 import TranslationsProvider from '@/components/TranslationProvider';
 import { getUpcomingEventData } from '@/cms/event';
 import type { Metadata } from 'next';
 import { formatDateRange, getImageSrc } from '@/cms/utils';
 import { Fragment } from 'react';
+import PageContentBox from '@/components/layout/PageContentBox';
+import StrapiRichtext from '@/components/layout/StrapiRichtext';
 
 const i18nNamespaces = ['common'];
 
@@ -20,7 +22,7 @@ export default async function Home({
 }: {
   params: { locale: string };
 }) {
-  const { t, resources } = await initTranslations(locale, i18nNamespaces);
+  //const { t, resources } = await initTranslations(locale, i18nNamespaces);
   const upcomingEventData = await getUpcomingEventData(locale);
   //console.log(JSON.stringify(upcomingEventData, null, 2));
 
@@ -47,6 +49,14 @@ export default async function Home({
             {upcomingEventData?.event_location}
           </div>
         </div>
+        <PageContentBox className='mt-12 lg:mt-24'>
+          <h2 className="relative text-2xl font-black italic tracking-[0.019em] [text-align-last:right] before:absolute before:-left-3 before:top-0 before:content-['\\201E'] after:absolute after:-right-3 after:bottom-0 after:content-['\\201C'] lg:text-[89px]/[86px] lg:before:-left-9 lg:after:-right-9">
+            {upcomingEventData?.claim}
+          </h2>
+          <div className='mt-6 tracking-[0.019em] lg:mt-10 lg:text-[18px]/[25px]'>
+            <StrapiRichtext content={upcomingEventData?.info} />
+          </div>
+        </PageContentBox>
       </main>
     </TranslationsProvider>
   );
