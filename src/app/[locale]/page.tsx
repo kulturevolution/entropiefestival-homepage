@@ -1,4 +1,4 @@
-//import initTranslations from '@/app/i18n';
+import initTranslations from '@/app/i18n';
 import i18nConfig from '@/i18nConfig';
 import TranslationsProvider from '@/components/TranslationProvider';
 import { getUpcomingEventData } from '@/cms/event';
@@ -22,7 +22,7 @@ export default async function Home({
 }: {
   params: { locale: string };
 }) {
-  //const { t, resources } = await initTranslations(locale, i18nNamespaces);
+  const { t, resources } = await initTranslations(locale, i18nNamespaces);
   const upcomingEventData = await getUpcomingEventData(locale);
   //console.log(JSON.stringify(upcomingEventData, null, 2));
 
