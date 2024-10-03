@@ -11,7 +11,10 @@ import React from 'react';
 import Podcast from '@/components/gfx/Podcast';
 import MenuItem from '@/components/layout/MainMenu/MenuItem';
 
-const MainMenu: React.FC<{ locale: string }> = ({ locale }) => {
+const MainMenu: React.FC<{ locale: string; showProgram?: boolean }> = ({
+  locale,
+  showProgram,
+}) => {
   const { menuOpen } = useMainMenuStore();
   const { t } = useTranslation(['common']);
 
@@ -23,7 +26,10 @@ const MainMenu: React.FC<{ locale: string }> = ({ locale }) => {
       )}
     >
       <div className='mb-6 flex flex-col gap-y-6'>
-        {['tickets', 'program', 'faq', 'archive'].map((slug, sI) => (
+        {(showProgram
+          ? ['tickets', 'program', 'faq', 'archive']
+          : ['tickets', 'faq', 'archive']
+        ).map((slug, sI) => (
           <MenuItem
             href={`/${locale}/${slug}`}
             title={t(`mainMenu.${slug}`)}

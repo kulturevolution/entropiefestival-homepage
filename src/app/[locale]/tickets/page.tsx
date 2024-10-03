@@ -4,8 +4,8 @@ import TranslationsProvider from '@/components/TranslationProvider';
 import { getUpcomingEventData } from '@/cms/event';
 import type { Metadata } from 'next';
 import PageContentBox from '@/components/layout/PageContentBox';
-import Script from "next/script";
-import {getDomain} from "@/cms/utils";
+import Script from 'next/script';
+import { getDomain } from '@/cms/utils';
 
 const i18nNamespaces = ['common'];
 
@@ -37,7 +37,7 @@ export default async function Tickets({
             <div>
               <Script
                 src={`${getDomain(upcomingEventData?.ticket_shop_url)}widget/v1.de-informal.js`}
-                strategy="afterInteractive"
+                strategy='afterInteractive'
               />
               <link
                 rel='stylesheet'
