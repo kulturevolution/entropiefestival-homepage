@@ -53,9 +53,11 @@ export default async function Home({
           <h2 className="relative text-2xl font-black italic tracking-[0.019em] [text-align-last:right] before:absolute before:-left-3 before:top-0 before:content-['\201E'] after:absolute after:-right-3 after:bottom-0 after:content-['\201C'] lg:text-[89px]/[86px] lg:before:-left-10 lg:after:-right-10">
             {upcomingEventData?.claim}
           </h2>
-          <div className='mt-6 tracking-[0.019em] lg:mt-10 lg:text-[18px]/[25px]'>
-            <StrapiRichtext content={upcomingEventData?.info} />
-          </div>
+          {upcomingEventData?.info ? (
+            <div className='mt-6 tracking-[0.019em] lg:mt-10 lg:text-[18px]/[25px]'>
+              <StrapiRichtext content={upcomingEventData?.info} />
+            </div>
+          ) : null}
         </PageContentBox>
       </main>
     </TranslationsProvider>
