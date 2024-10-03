@@ -5,8 +5,6 @@ import { getUpcomingEventData } from '@/cms/event';
 import type { Metadata } from 'next';
 import { formatDateRange, getImageSrc } from '@/cms/utils';
 import { Fragment } from 'react';
-import PageContentBox from '@/components/layout/PageContentBox';
-import StrapiRichtext from '@/components/layout/StrapiRichtext';
 
 const i18nNamespaces = ['common'];
 

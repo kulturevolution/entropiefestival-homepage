@@ -11,3 +11,8 @@ export function formatDateRange(startDate: Date, endDate: Date): string {
     return `${format(startDate, 'dd.MM.')} - ${format(endDate, 'dd.MM.yyyy')}`;
   }
 }
+
+export function getDomain(url: string): string {
+  const parsedUrl = new URL(url);
+  return `${parsedUrl.protocol}//${parsedUrl.hostname}/`;
+}
