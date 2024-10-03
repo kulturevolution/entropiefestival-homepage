@@ -27,8 +27,8 @@ const MainMenu: React.FC<{ locale: string; showProgram?: boolean }> = ({
     >
       <div className='mb-6 flex flex-col gap-y-6'>
         {(showProgram
-          ? ['tickets', 'program', 'faq', 'archive']
-          : ['tickets', 'faq', 'archive']
+          ? ['info', 'tickets', 'program' /*, 'faq', 'archive'*/]
+          : ['info', 'tickets' /*, 'faq', 'archive'*/]
         ).map((slug, sI) => (
           <MenuItem
             href={`/${locale}/${slug}`}
@@ -41,7 +41,7 @@ const MainMenu: React.FC<{ locale: string; showProgram?: boolean }> = ({
         <LanguageChanger />
       </div>
       <div className='mt-4 flex flex-col gap-y-4'>
-        {['contact', 'imprint', 'terms'].map((slug, sI) => (
+        {['contact', 'imprint', 'terms', 'privacy'].map((slug, sI) => (
           <MenuItem
             href={`/${locale}/${slug}`}
             title={t(`mainMenu.${slug}`)}

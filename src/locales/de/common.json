@@ -1,6 +1,6 @@
 {
-  "welcome": "Willkommen!",
   "mainMenu": {
+    "info": "Info",
     "tickets": "Tickets",
     "program": "Programm",
     "faq": "Fragen",
@@ -8,6 +8,7 @@
     "contact": "Kontakt",
     "imprint": "Impressum",
     "terms": "AGB",
+    "privacy": "Datenschutz",
     "language": {
       "de": "deutsch",
       "en": "english"

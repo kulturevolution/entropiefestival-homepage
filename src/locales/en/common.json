@@ -1,3 +1,17 @@
 {
-  "welcome": "Welcome!"
+  "mainMenu": {
+    "info": "Info",
+    "tickets": "Tickets",
+    "program": "Program",
+    "faq": "FAQ",
+    "archive": "Archive",
+    "contact": "Contact",
+    "imprint": "Imprint",
+    "terms": "AGB",
+    "privacy": "Privacy",
+    "language": {
+      "de": "deutsch",
+      "en": "english"
+    }
+  }
 }
