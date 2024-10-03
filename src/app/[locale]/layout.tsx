@@ -12,6 +12,8 @@ import ContentContainer from '@/components/layout/ContentContainer';
 
 const i18nNamespaces = ['common'];
 
+export const revalidate = 120;
+
 export default async function RootLayout({
   children,
   params: { locale },
