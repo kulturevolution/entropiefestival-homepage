@@ -9,10 +9,16 @@ import initTranslations from '@/app/i18n';
 import TranslationsProvider from '@/components/TranslationProvider';
 import FooterMenu from '@/components/layout/FooterMenu';
 import ContentContainer from '@/components/layout/ContentContainer';
+import type { Metadata } from 'next';
 
 const i18nNamespaces = ['common'];
 
 export const revalidate = 120;
+
+export const metadata: Metadata = {
+  title: 'entropiefestival',
+  description: 'entropiefestival 2025 - 22.-24.08.2025',
+};
 
 export default async function RootLayout({
   children,

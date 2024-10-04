@@ -8,7 +8,9 @@ const StrapiRichtext: React.FC<{ content: BlocksContent }> = ({ content }) => {
     <BlocksRenderer
       content={content}
       blocks={{
-        paragraph: ({ children }) => <p className='mb-2 lg:mb-4'>{children}</p>,
+        paragraph: ({ children }) => (
+          <p className='mb-2 whitespace-pre-wrap lg:mb-4'>{children}</p>
+        ),
       }}
     />
   );
