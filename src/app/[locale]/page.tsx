@@ -24,20 +24,24 @@ export default async function Home({
       resources={resources}
     >
       <main>
-        <div className='-mt-32 flex h-dvh flex-col items-center justify-center pl-6 lg:pl-0'>
-          <img
-            src={getImageSrc(upcomingEventData?.image)}
-            alt={upcomingEventData?.title}
-            className='max-h-[250px] max-w-[60%] object-contain'
-          />
-          <div className='text-center font-light tracking-[0.05em] md:text-[24px]/[23px] lg:text-[42px]/[41px]'>
-            {formatDateRange(
-              new Date(upcomingEventData?.date_from),
-              new Date(upcomingEventData?.date_to)
-            )}
-            {' @'}
-            <Fragment>&nbsp;</Fragment>
-            {upcomingEventData?.event_location}
+        <div className='-mt-32 flex h-dvh flex-col items-center justify-center'>
+          <div className='w-full px-8 lg:px-14'>
+            {upcomingEventData?.homepage_header_mobile ? (
+              <div
+                className='lg:hidden'
+                dangerouslySetInnerHTML={{
+                  __html: upcomingEventData?.homepage_header_mobile,
+                }}
+              />
+            ) : null}
+            {upcomingEventData?.homepage_header_desktop ? (
+              <div
+                className='hidden lg:block'
+                dangerouslySetInnerHTML={{
+                  __html: upcomingEventData?.homepage_header_desktop,
+                }}
+              />
+            ) : null}
           </div>
         </div>
       </main>
