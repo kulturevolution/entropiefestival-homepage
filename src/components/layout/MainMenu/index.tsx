@@ -21,8 +21,8 @@ const MainMenu: React.FC<{ locale: string; showProgram?: boolean }> = ({
   return (
     <div
       className={classNames(
-        'fixed left-[120px] top-0 z-20 flex h-dvh flex-col pb-5 pt-32 transition-all lg:!left-[58px] lg:pb-10 lg:pt-48',
-        menuOpen ? 'left-[120px]' : 'left-full'
+        'fixed top-0 z-20 flex h-dvh flex-col pb-5 pt-32 transition-all lg:!left-[58px] lg:!right-auto lg:pb-10 lg:pt-48',
+        menuOpen ? 'right-52' : '-right-full'
       )}
     >
       <div className='mb-6 flex flex-col gap-y-6'>
