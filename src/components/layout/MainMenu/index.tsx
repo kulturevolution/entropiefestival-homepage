@@ -16,7 +16,7 @@ const MainMenu: React.FC<{ locale: string; showProgram?: boolean }> = ({
 }) => {
   const { menuOpen, setMenu } = useMainMenuStore();
   const { t } = useTranslation(['common']);
-  const menuRef = useRef<HTMLDivElement>();
+  const menuRef = useRef<HTMLDivElement | null>(null);
 
   const updateMenuWidth = () => {
     if (menuRef.current) {
