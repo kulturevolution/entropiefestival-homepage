@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 import Link from 'next/link';
 import classNames from 'classnames';
 
-const MenuItem: React.FC<{ href: string; title: string; level?: string }> = ({
-  href,
-  title,
-  level = 'primary',
-}) => {
+const MenuItem: React.FC<{
+  href: string;
+  title: string;
+  level?: string;
+  onClick?: MouseEventHandler;
+}> = ({ href, title, level = 'primary', onClick }) => {
   return (
     <div className='group inline-flex'>
       <div className='relative'>
@@ -18,6 +19,7 @@ const MenuItem: React.FC<{ href: string; title: string; level?: string }> = ({
             'text-[12px]/[18px] font-medium tracking-[0.008em] text-white':
               level === 'secondary',
           })}
+          onClick={onClick ?? null}
         >
           {title}
         </Link>

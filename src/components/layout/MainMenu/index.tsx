@@ -15,7 +15,7 @@ const MainMenu: React.FC<{ locale: string; showProgram?: boolean }> = ({
   locale,
   showProgram,
 }) => {
-  const { menuOpen } = useMainMenuStore();
+  const { menuOpen, setMenu } = useMainMenuStore();
   const { t } = useTranslation(['common']);
 
   return (
@@ -34,6 +34,7 @@ const MainMenu: React.FC<{ locale: string; showProgram?: boolean }> = ({
             href={`/${locale}/${slug}`}
             title={t(`mainMenu.${slug}`)}
             key={sI}
+            onClick={() => setMenu(false)}
           />
         ))}
       </div>
@@ -47,6 +48,7 @@ const MainMenu: React.FC<{ locale: string; showProgram?: boolean }> = ({
             title={t(`mainMenu.${slug}`)}
             key={sI}
             level='secondary'
+            onClick={() => setMenu(false)}
           />
         ))}
       </div>
