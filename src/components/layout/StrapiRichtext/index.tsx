@@ -11,6 +11,16 @@ const StrapiRichtext: React.FC<{ content: BlocksContent }> = ({ content }) => {
         paragraph: ({ children }) => (
           <p className='mb-2 whitespace-pre-wrap lg:mb-4'>{children}</p>
         ),
+        link: ({ children, url }) => (
+          <a
+            href={url}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='font-[600] underline'
+          >
+            {children}
+          </a>
+        ),
         heading: ({ children, level }) => {
           switch (level) {
             case 1:
