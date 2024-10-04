@@ -9,19 +9,6 @@ const Podcast: React.FC<{ className?: string }> = ({ className }) => (
   >
     <g id='Gruppe_162' transform='translate(-1695 -914.5)'>
       <g id='Rechteck_221' transform='translate(1695 914.5)'>
-        <g
-          id='Gruppe_3'
-          data-name='Gruppe 3'
-          transform='translate(2.492 2.492)'
-        >
-          <path
-            id='Pfad_1'
-            data-name='Pfad 1'
-            d='M6.231-.5H106.554a6.171,6.171,0,0,1,6.231,6.231v7.6a6.171,6.171,0,0,1-6.231,6.231H6.231A6.171,6.171,0,0,1,0,13.333v-7.6A6.171,6.171,0,0,1,6.231-.5Z'
-            transform='translate(0 0.5)'
-            fill='#0019ff'
-          />
-        </g>
         <g id='Gruppe_4' data-name='Gruppe 4' transform='translate(0 0)'>
           <path
             id='Pfad_2'
