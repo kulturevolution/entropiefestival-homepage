@@ -2,7 +2,6 @@ import initTranslations from '@/app/i18n';
 import i18nConfig from '@/i18nConfig';
 import TranslationsProvider from '@/components/TranslationProvider';
 import { getUpcomingEventData } from '@/cms/event';
-import type { Metadata } from 'next';
 import PageContentBox from '@/components/layout/PageContentBox';
 import PretixWidget from '@/components/layout/Ticketing/PretixWidget';
 
