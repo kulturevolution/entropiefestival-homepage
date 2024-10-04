@@ -17,7 +17,6 @@ export default async function Tickets({
 }) {
   const { t, resources } = await initTranslations(locale, i18nNamespaces);
   const upcomingEventData = await getUpcomingEventData(locale);
-  console.log(JSON.stringify(upcomingEventData, null, 2));
 
   return (
     <TranslationsProvider
@@ -26,9 +25,24 @@ export default async function Tickets({
       resources={resources}
     >
       <main>
-        <h2 className='-mb-4 ml-8 text-[80px]/[80px] font-black text-white lg:-mb-16 lg:ml-16 lg:text-[280px]/[280px]'>
-          TIX
-        </h2>
+        <div className='px-8 lg:px-14'>
+          {upcomingEventData?.ticket_header_mobile ? (
+            <div
+              className='lg:hidden'
+              dangerouslySetInnerHTML={{
+                __html: upcomingEventData?.ticket_header_mobile,
+              }}
+            />
+          ) : null}
+          {upcomingEventData?.ticket_header_desktop ? (
+            <div
+              className='hidden lg:block'
+              dangerouslySetInnerHTML={{
+                __html: upcomingEventData?.ticket_header_desktop,
+              }}
+            />
+          ) : null}
+        </div>
         <PageContentBox>
           {upcomingEventData?.ticket_shop_url ? (
             <PretixWidget url={upcomingEventData?.ticket_shop_url} />
