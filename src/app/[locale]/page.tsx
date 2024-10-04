@@ -31,7 +31,7 @@ export default async function Home({
       resources={resources}
     >
       <main>
-        <div className='-mt-24 flex h-screen flex-col items-center justify-center pl-6 lg:-mt-32 lg:pl-0'>
+        <div className='-mt-32 flex h-dvh flex-col items-center justify-center pl-6 lg:pl-0'>
           <img
             src={getImageSrc(upcomingEventData?.image)}
             alt={upcomingEventData?.title}

@@ -19,7 +19,7 @@ const MenuItem: React.FC<{
             'text-[12px]/[18px] font-medium tracking-[0.008em] text-white':
               level === 'secondary',
           })}
-          onClick={onClick ?? null}
+          onClick={onClick ?? undefined}
         >
           {title}
         </Link>
