@@ -45,7 +45,7 @@ export default async function Tickets({
         </div>
         <PageContentBox>
           {upcomingEventData?.ticket_text_before ? (
-            <div className='mb-8'>
+            <div className='mb-12'>
               <StrapiRichtext content={upcomingEventData?.ticket_text_before} />
             </div>
           ) : null}
@@ -53,7 +53,7 @@ export default async function Tickets({
             <PretixWidget url={upcomingEventData?.ticket_shop_url} />
           ) : null}
           {upcomingEventData?.ticket_text_after ? (
-            <div className='mt-8'>
+            <div className='mt-12'>
               <StrapiRichtext content={upcomingEventData?.ticket_text_after} />
             </div>
           ) : null}
