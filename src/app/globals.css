@@ -117,3 +117,8 @@ body {
 .pretix-widget-attribution {
   display: none;
 }
+
+.pretix-widget-category-items {
+  display: flex;
+  flex-direction: column-reverse;
+}
