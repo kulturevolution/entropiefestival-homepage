@@ -43,6 +43,13 @@ const StrapiRichtext: React.FC<{ content: BlocksContent }> = ({ content }) => {
               );
           }
         },
+        list: ({ children, format }) => {
+          if (format === 'unordered') {
+            return <ul className='mb-5 ml-5 list-disc'>{children}</ul>;
+          } else {
+            return <ol className='mb-5 ml-5 list-decimal'>{children}</ol>;
+          }
+        },
       }}
     />
   );
