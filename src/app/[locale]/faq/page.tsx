@@ -17,7 +17,7 @@ export default async function Faq({
   params: { locale: string };
 }) {
   const { t, resources } = await initTranslations(locale, i18nNamespaces);
-  const faqsData = await getFaqData(locale);
+  const faqsData = await getFaqData('de');
   const upcomingEventData = await getUpcomingEventData(locale);
   //console.log(JSON.stringify(faqsData, null, 2));
 
@@ -48,8 +48,8 @@ export default async function Faq({
         </div>
         <PageContentBox>
           {faqsData
-            ?.filter((f) => f.info)
-            ?.sort((a, b) => a.title?.localeCompare(b.title))
+            ?.filter((f: any) => f.info)
+            ?.sort((a: any, b: any) => a.title?.localeCompare(b.title))
             ?.map((faqEntry, fI) => (
               <div key={fI} className='mb-8 mt-4 lg:mb-16'>
                 <h2 className='mb-6 text-2xl font-black lg:mb-8 lg:text-4xl'>
