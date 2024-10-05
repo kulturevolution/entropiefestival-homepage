@@ -50,7 +50,7 @@ export default async function Faq({
           {faqsData
             ?.filter((f: any) => f.info)
             ?.sort((a: any, b: any) => a.title?.localeCompare(b.title))
-            ?.map((faqEntry, fI) => (
+            ?.map((faqEntry: any, fI: number) => (
               <div key={fI} className='mb-8 mt-4 lg:mb-16'>
                 <h2 className='mb-6 text-2xl font-black lg:mb-8 lg:text-4xl'>
                   {faqEntry?.title}
