@@ -16,8 +16,9 @@ const i18nNamespaces = ['common'];
 export const revalidate = 120;
 
 export const metadata: Metadata = {
-  title: 'entropiefestival',
-  description: 'entropiefestival 2025 - 22.-24.08.2025',
+  title: 'entropiefestival 2025 - 22.-24.08.2025',
+  description:
+    'Die entropie ist dem Wunsch entsprungen, einen Raum für alternative Kunst, Feierei und kreatives Leben fernab von kapitalistischer Verwertungslogik zu schaffen.',
 };
 
 export default async function RootLayout({
