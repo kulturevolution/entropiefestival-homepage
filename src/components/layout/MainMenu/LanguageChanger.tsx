@@ -5,10 +5,12 @@ import { useTranslation } from 'react-i18next';
 import i18nConfig from '@/i18nConfig';
 import Link from 'next/link';
 import React from 'react';
+import { useMainMenuStore } from '@/zustand/mainMenuStore';
 
 const LanguageChanger: React.FC<{ localeOverridePaths?: any }> = ({
   localeOverridePaths,
 }) => {
+  const { setMenu } = useMainMenuStore();
   const { t, i18n } = useTranslation(['common']);
   const currentLocale = i18n.language;
   const currentPathname = usePathname();
@@ -42,6 +44,7 @@ const LanguageChanger: React.FC<{ localeOverridePaths?: any }> = ({
             key={lI}
             locale={locale}
             className='text-[21px]/[30px] font-medium tracking-[0.071em] text-white'
+            onClick={() => setMenu(false)}
           >
             {t(`mainMenu.language.${locale}`)}
           </Link>
