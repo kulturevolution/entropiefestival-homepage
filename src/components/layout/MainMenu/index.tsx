@@ -43,8 +43,8 @@ const MainMenu: React.FC<{ locale: string; showProgram?: boolean }> = ({
     >
       <div className='mb-6 flex flex-col gap-y-6'>
         {(showProgram
-          ? ['info', 'tickets', 'program' /*, 'faq', 'archive'*/]
-          : ['info', 'tickets' /*, 'faq', 'archive'*/]
+          ? ['info', 'tickets', 'program', 'faq' /*, 'archive'*/]
+          : ['info', 'tickets', 'faq' /*, 'archive'*/]
         ).map((slug, sI) => (
           <MenuItem
             href={`/${locale}/${slug}`}
