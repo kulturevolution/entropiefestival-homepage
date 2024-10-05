@@ -25,7 +25,9 @@ const StrapiRichtext: React.FC<{ content: BlocksContent }> = ({ content }) => {
           switch (level) {
             case 1:
               return (
-                <h1 className='mb-6 text-[64px] font-black'>{children}</h1>
+                <h1 className='md-4 text-[50px] font-black lg:mb-6 lg:text-[64px]'>
+                  {children}
+                </h1>
               );
             case 2:
               return (
