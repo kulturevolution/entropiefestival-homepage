@@ -1,10 +1,21 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Script from 'next/script';
 import { getDomain } from '@/cms/utils';
 
 const PretixWidget: React.FC<{ url: string }> = ({ url }) => {
+  useEffect(() => {
+    return () => {
+      const pretixWidgetOverlay = document.querySelector(
+        '.pretix-widget-overlay'
+      );
+      if (pretixWidgetOverlay) {
+        pretixWidgetOverlay.remove();
+      }
+    };
+  }, []);
+
   return (
     <div>
       <Script
