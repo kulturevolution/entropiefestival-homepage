@@ -33,10 +33,7 @@ body {
   filter: drop-shadow(1px 4px 8px rgba(180, 10, 99, 0.15));
 }
 
-.pretix-widget-pricebox {
-  width: 100px;
-}
-.pretix-widget-item-row {
+retix-widget-item-row {
   display: grid;
   grid-template-columns: 1fr auto 70px;
   width: 100%;
@@ -55,4 +52,14 @@ body {
 .pretix-widget.pretix-widget-mobile .pretix-widget-item-price-col,
 .pretix-widget.pretix-widget-mobile .pretix-widget-item-availability-col {
   width: 100%;
+}
+
+.pretix-widget.pretix-widget-mobile .pretix-widget-item-price-col,
+.pretix-widget.pretix-widget-mobile .pretix-widget-item-availability-col {
+  width: 130px;
+}
+.pretix-widget .pretix-widget-item-price-col,
+.pretix-widget .pretix-widget-item-availability-col,
+.pretix-widget .pretix-widget-item-info-col {
+  padding: 0 0 0 0;
 }
