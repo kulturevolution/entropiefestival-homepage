@@ -15,7 +15,7 @@ export async function getFaqData(locale: string): Promise<any> {
 
     const result = await response.json();
     //console.log(JSON.stringify(result, null, 2));
-    return result?.data?.map((faq) => ({
+    return result?.data?.map((faq: any) => ({
       ...faq?.attributes,
       id: faq?.id,
     }));
