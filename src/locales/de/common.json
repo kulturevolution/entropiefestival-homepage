@@ -3,7 +3,7 @@
     "info": "Info",
     "tickets": "Tickets",
     "program": "Programm",
-    "faq": "Fragen",
+    "faq": "FAQ",
     "archive": "Archiv",
     "contact": "Kontakt",
     "imprint": "Impressum",
@@ -13,5 +13,5 @@
       "en": "english"
     }
   },
-  "buyTicket": "Ticket kaufen"
+  "buyTicket": "Tickets kaufen"
 }
