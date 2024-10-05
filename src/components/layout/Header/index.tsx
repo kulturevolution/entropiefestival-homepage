@@ -8,7 +8,7 @@ import MenuOpen from '@/components/gfx/MenuOpen';
 import LogoSmall from '@/components/gfx/LogoSmall';
 import { useMainMenuStore } from '@/zustand/mainMenuStore';
 import LogoSmallHover from '@/components/gfx/LogoSmallHover';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import classNames from 'classnames';
 
 const Header: React.FC<{ locale: string }> = ({ locale }) => {
