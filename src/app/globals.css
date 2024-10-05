@@ -27,3 +27,8 @@ body {
     text-wrap: balance;
   }
 }
+
+#page-header path,
+#page-header text {
+  filter: drop-shadow(1px 4px 8px rgba(180, 10, 99, 0.15));
+}
