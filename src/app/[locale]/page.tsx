@@ -2,8 +2,7 @@ import initTranslations from '@/app/i18n';
 import i18nConfig from '@/i18nConfig';
 import TranslationsProvider from '@/components/TranslationProvider';
 import { getUpcomingEventData } from '@/cms/event';
-import { formatDateRange, getImageSrc } from '@/cms/utils';
-import { Fragment } from 'react';
+import Link from 'next/link';
 
 const i18nNamespaces = ['common'];
 export const revalidate = 120;
@@ -42,6 +41,14 @@ export default async function Home({
                 }}
               />
             ) : null}
+          </div>
+          <div className='mt-6 text-center'>
+            <Link
+              href={`/${locale}/tickets`}
+              className='border-2 border-white bg-primary px-20 py-2 text-[27px]/[39px] font-bold transition-all hover:border-primary hover:bg-white hover:text-primary'
+            >
+              {t('buyTicket')}
+            </Link>
           </div>
         </div>
       </main>
