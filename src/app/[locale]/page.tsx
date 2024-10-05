@@ -45,7 +45,7 @@ export default async function Home({
           <div className='mt-6 text-center'>
             <Link
               href={`/${locale}/tickets`}
-              className='border-2 border-white bg-primary px-20 py-2 text-[27px]/[39px] font-bold text-white transition-all hover:border-primary hover:bg-white hover:text-primary'
+              className='rounded-[20px] border-2 border-white bg-primary px-20 py-2 text-[27px]/[39px] font-bold text-white transition-all hover:border-primary hover:bg-white hover:text-primary'
             >
               {t('buyTicket')}
             </Link>
