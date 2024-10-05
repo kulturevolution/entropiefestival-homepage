@@ -24,8 +24,8 @@ export default async function Home({
       resources={resources}
     >
       <main>
-        <div className='-mt-32 flex h-dvh flex-col items-center justify-center'>
-          <div className='w-full px-8 lg:px-14'>
+        <div className='-mt-32 ml-6 flex h-dvh flex-col items-center justify-center lg:ml-0'>
+          <div className='w-full'>
             {upcomingEventData?.homepage_header_mobile ? (
               <div
                 className='lg:hidden'
