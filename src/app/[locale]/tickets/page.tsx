@@ -4,6 +4,7 @@ import TranslationsProvider from '@/components/TranslationProvider';
 import { getUpcomingEventData } from '@/cms/event';
 import PageContentBox from '@/components/layout/PageContentBox';
 import PretixWidget from '@/components/layout/Ticketing/PretixWidget';
+import StrapiRichtext from '@/components/layout/StrapiRichtext';
 
 const i18nNamespaces = ['common'];
 
@@ -43,8 +44,18 @@ export default async function Tickets({
           ) : null}
         </div>
         <PageContentBox>
+          {upcomingEventData?.ticket_text_before ? (
+            <div className='mb-8'>
+              <StrapiRichtext content={upcomingEventData?.ticket_text_before} />
+            </div>
+          ) : null}
           {upcomingEventData?.ticket_shop_url ? (
             <PretixWidget url={upcomingEventData?.ticket_shop_url} />
+          ) : null}
+          {upcomingEventData?.ticket_text_after ? (
+            <div className='mt-8'>
+              <StrapiRichtext content={upcomingEventData?.ticket_text_after} />
+            </div>
           ) : null}
         </PageContentBox>
       </main>
