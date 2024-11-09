@@ -41,8 +41,8 @@ export async function POST(req: NextRequest) {
       body,
     });
 
-    const answer = await response.json();
-    if (answer.message === 'E-Mail existiert bereits.') {
+    const answer: any = await response.json();
+    if (answer?.message === 'E-Mail existiert bereits.') {
       return NextResponse.json(null, { status: 200 });
     }
 
