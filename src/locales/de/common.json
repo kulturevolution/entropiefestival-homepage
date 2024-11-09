@@ -13,5 +13,13 @@
       "en": "english"
     }
   },
-  "buyTicket": "Tickets kaufen"
+  "buyTicket": "Tickets kaufen",
+  "newsletterForm": {
+    "email": {
+      "placeholder": "E-Mail"
+    },
+    "submit": "Anmelden",
+    "error": "Leider ist ein Fehler aufgetreten. Bitte versuche es später erneut.",
+    "success": "Vielen Dank für deine Anmeldung!"
+  }
 }

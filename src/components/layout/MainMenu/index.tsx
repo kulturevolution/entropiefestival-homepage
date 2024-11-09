@@ -6,9 +6,11 @@ import Instagram from '@/components/gfx/Instagram';
 import { useTranslation } from 'react-i18next';
 import { useMainMenuStore } from '@/zustand/mainMenuStore';
 import classNames from 'classnames';
-import React, { LegacyRef, useEffect, useRef } from 'react';
-import Podcast from '@/components/gfx/Podcast';
+import React, { useEffect, useRef } from 'react';
 import MenuItem from '@/components/layout/MainMenu/MenuItem';
+import Soundcloud from '@/components/gfx/Soundcloud';
+import Newsletter from '@/components/gfx/Newsletter';
+import Link from 'next/link';
 
 const MainMenu: React.FC<{ locale: string; showProgram?: boolean }> = ({
   locale,
@@ -69,13 +71,9 @@ const MainMenu: React.FC<{ locale: string; showProgram?: boolean }> = ({
         ))}
       </div>
       <div className='mt-8 lg:hidden'>
-        <a
-          href='https://soundcloud.com/entropiefestival/sets/entropiecast'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <Podcast />
-        </a>
+        <Link href={`/${locale}/newsletter`}>
+          <Newsletter />
+        </Link>
       </div>
       <div className='mt-3 flex gap-x-6 lg:hidden'>
         <a
@@ -91,6 +89,13 @@ const MainMenu: React.FC<{ locale: string; showProgram?: boolean }> = ({
           rel='noopener noreferrer'
         >
           <Instagram />
+        </a>
+        <a
+          href='https://soundcloud.com/entropiefestival'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <Soundcloud />
         </a>
       </div>
     </div>

@@ -13,5 +13,13 @@
       "en": "english"
     }
   },
-  "buyTicket": "Buy tickets"
+  "buyTicket": "Buy tickets",
+  "newsletterForm": {
+    "email": {
+      "placeholder": "Email"
+    },
+    "submit": "Subscribe",
+    "error": "An error occurred. Please try again later.",
+    "success": "Thank you for subscribing!"
+  }
 }
