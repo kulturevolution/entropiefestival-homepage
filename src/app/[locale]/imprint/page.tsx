@@ -23,7 +23,7 @@ export default async function Imprint({
       namespaces={i18nNamespaces}
       resources={resources}
     >
-      <main>
+      <main className='flex flex-1 flex-col'>
         <PageContentBox>
           <h2 className='mb-6 text-2xl font-black lg:mb-8 lg:text-4xl'>
             {pageData?.title}

@@ -24,7 +24,7 @@ export default async function Tickets({
       namespaces={i18nNamespaces}
       resources={resources}
     >
-      <main>
+      <main className='flex flex-1 flex-col'>
         <div className='px-8 lg:px-14'>
           {upcomingEventData?.ticket_header_mobile ? (
             <div

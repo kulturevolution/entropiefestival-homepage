@@ -23,7 +23,7 @@ export default async function Info({
       namespaces={i18nNamespaces}
       resources={resources}
     >
-      <main>
+      <main className='flex flex-1 flex-col'>
         {pageData?.page_header_mobile && pageData?.page_header_desktop ? (
           <div className='px-8 lg:px-14'>
             {pageData?.page_header_mobile ? (
