@@ -122,3 +122,8 @@ body {
   display: flex;
   flex-direction: column-reverse;
 }
+
+.pretix-widget-frame-holder .pretix-widget-frame-close a {
+  display: grid !important;
+  justify-content: center;
+}
