@@ -71,7 +71,7 @@ const MainMenu: React.FC<{ locale: string; showProgram?: boolean }> = ({
         ))}
       </div>
       <div className='mt-8 lg:hidden'>
-        <Link href={`/${locale}/newsletter`}>
+        <Link href={`/${locale}/newsletter`} onClick={() => setMenu(false)}>
           <Newsletter />
         </Link>
       </div>

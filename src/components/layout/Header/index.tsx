@@ -26,7 +26,11 @@ const Header: React.FC<{ locale: string }> = ({ locale }) => {
 
   return (
     <div className='pointer-events-none absolute left-0 right-0 z-30 mx-5 my-6 flex items-center gap-x-2 lg:fixed lg:mx-16 lg:my-16'>
-      <Link href={`/${locale}`} className='group pointer-events-auto'>
+      <Link
+        href={`/${locale}`}
+        className='group pointer-events-auto'
+        onClick={() => setMenu(false)}
+      >
         <LogoFull
           className={classNames('lg:hidden', {
             'opacity-0': pathname === `/${locale}`,
