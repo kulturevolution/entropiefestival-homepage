@@ -48,13 +48,13 @@ const NewsletterForm: React.FC = () => {
             onChange={(event) => setEmail(event.target.value)}
             placeholder={t('newsletterForm.email.placeholder')}
             required
-            className='mb-2.5 flex h-16 w-full items-center border-2 border-primary px-6 py-4 text-[22px] tracking-[0.019em] text-primary outline-none'
+            className='text-17px mb-2.5 flex h-12 w-full items-center border-2 border-primary px-3 py-2 tracking-[0.019em] text-primary outline-none xl:h-16 xl:px-6 xl:py-4 xl:text-[22px]'
           />
           <div>
             <button
               type='submit'
               disabled={isLoading}
-              className='flex h-16 items-center border-2 border-primary bg-primary px-32 text-[27px] font-bold tracking-[0.071em] text-white outline-none transition-colors hover:bg-white hover:text-primary focus:bg-white focus:text-primary'
+              className='flex h-12 items-center border-2 border-primary bg-primary px-8 text-[19px] font-bold tracking-[0.071em] text-white outline-none transition-colors hover:bg-white hover:text-primary focus:bg-white focus:text-primary xl:h-16 xl:px-32 xl:text-[27px]'
             >
               {t('newsletterForm.submit')}
             </button>
