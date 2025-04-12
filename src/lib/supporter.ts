@@ -21,7 +21,7 @@ export async function getRateLimit(ipAddress: string, minutes: number = 30) {
 
   try {
     const [rows] = await connection.execute(
-      'SELECT COUNT(*) as count FROM submissions WHERE ipAddress = ? AND createdAt > DATE_SUB(NOW(), INTERVAL ? MINUTE)',
+      'SELECT COUNT(*) as count FROM supporter WHERE ipAddress = ? AND createdAt > DATE_SUB(NOW(), INTERVAL ? MINUTE)',
       [ipAddress, minutes]
     );
 
