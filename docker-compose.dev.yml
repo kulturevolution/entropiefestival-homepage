@@ -1,0 +1,25 @@
+services:
+  mariadb:
+    image: mariadb:10.11
+    container_name: entropiefestival_homepage_mariadb
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - mariadb_data:/var/lib/mysql
+  mailhog:
+    image: mailhog/mailhog
+    container_name: entropiefestival_homepage_mailhog
+    ports:
+      - '1025:1025' # SMTP server
+      - '8025:8025' # Web UI
+    volumes:
+      - mailhog:/var/lib/mailhog
+
+volumes:
+  mariadb_data:
+  mailhog:

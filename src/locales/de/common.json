@@ -4,6 +4,7 @@
     "tickets": "Tickets",
     "program": "Programm",
     "faq": "FAQ",
+    "help": "Helfen",
     "archive": "Archiv",
     "contact": "Kontakt",
     "imprint": "Impressum",
@@ -21,5 +22,23 @@
     "submit": "Anmelden",
     "error": "Leider ist ein Fehler aufgetreten. Bitte versuche es später erneut.",
     "success": "Vielen Dank für deine Anmeldung!"
+  },
+  "supporterForm": {
+    "title": "Anmeldung",
+    "firstName": {
+      "placeholder": "Rufname"
+    },
+    "lastName": {
+      "placeholder": "Nachname"
+    },
+    "email": {
+      "placeholder": "E-Mail"
+    },
+    "pronoun": {
+      "placeholder": "Pronomen (optional)"
+    },
+    "submit": "Absenden",
+    "success": "Vielen Dank, dass du uns unterstützt! Wir werden uns in Kürze bei dir melden.",
+    "error": "Leider ist ein Fehler aufgetreten. Bitte versuche es später erneut."
   }
 }

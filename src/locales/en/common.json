@@ -4,6 +4,7 @@
     "tickets": "Tickets",
     "program": "Program",
     "faq": "FAQ",
+    "help": "Help",
     "archive": "Archive",
     "contact": "Contact",
     "imprint": "Imprint",
@@ -21,5 +22,23 @@
     "submit": "Subscribe",
     "error": "An error occurred. Please try again later.",
     "success": "Thank you for subscribing!"
+  },
+  "supporterForm": {
+    "title": "Registration",
+    "firstName": {
+      "placeholder": "Firstname"
+    },
+    "lastName": {
+      "placeholder": "Lastname"
+    },
+    "email": {
+      "placeholder": "Email"
+    },
+    "pronoun": {
+      "placeholder": "Pronoun (optional)"
+    },
+    "submit": "Submit",
+    "success": "Thank you for your support! We will get back to you shortly.",
+    "error": "Unfortunately, an error occurred. Please try again later."
   }
 }
