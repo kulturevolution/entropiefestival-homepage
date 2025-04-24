@@ -6,14 +6,14 @@ export const SupporterSchema = z.object({
     .min(1, 'First name is required')
     .max(255, 'First name must be less than 255 characters')
     .trim()
-    .regex(/^[a-zA-Z\s\-']+$/, 'First name contains invalid characters'),
+    .regex(/^[a-zA-Z\s\-'\p{L}]+$/u, 'First name contains invalid characters'),
 
   lastName: z
     .string()
     .min(1, 'Last name is required')
     .max(255, 'Last name must be less than 255 characters')
     .trim()
-    .regex(/^[a-zA-Z\s\-']+$/, 'Last name contains invalid characters'),
+    .regex(/^[a-zA-Z\s\-'\p{L}]+$/u, 'Last name contains invalid characters'),
 
   email: z
     .string()
@@ -31,7 +31,10 @@ export const SupporterSchema = z.object({
       'Pronoun must be less than 255 characters'
     )
     .refine(
-      (val) => val === undefined || val === '' || /^[a-zA-Z\s\-']*$/.test(val),
+      (val) =>
+        val === undefined ||
+        val === '' ||
+        /^[a-zA-Z\s\-'\p{L}\/_*]+$/u.test(val),
       'Pronoun contains invalid characters'
     ),
 });
