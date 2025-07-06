@@ -39,4 +39,3 @@ export async function getPageDataByTitle(
     id: result?.data?.[0]?.id,
   };
 }
-
