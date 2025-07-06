@@ -18,6 +18,7 @@ export async function getPageData(
     id: result?.data?.[0]?.id,
   };
 }
+
 export async function getPageDataByTitle(
     title: string,
     locale: string
