@@ -63,3 +63,4 @@ export default async function Selfconcept({
 export function generateStaticParams() {
     return i18nConfig.locales.map((locale) => ({ locale }));
 }
+
