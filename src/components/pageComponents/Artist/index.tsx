@@ -19,7 +19,7 @@ const Artist: React.FC<{ artist: any }> = ({ artist }) => {
           <h3 className='me-2 text-2xl font-black lg:text-4xl'>
             {artist.name}
           </h3>
-          <div className='gap-2 self-start'>
+          <div className='hidden gap-2 self-start md:block'>
             {artist.artist_categories?.map((cat: any, cI: number) => (
               <span
                 key={cI}
@@ -31,7 +31,7 @@ const Artist: React.FC<{ artist: any }> = ({ artist }) => {
           </div>
         </div>
         <div className='ms-auto'>
-          <div className='ms-8 flex h-14 w-14 items-center justify-center'>
+          <div className='ms-8 flex h-8 w-8 items-center justify-center lg:h-14 lg:w-14'>
             {isOpen ? <ArtistClose /> : <ArtistOpen />}
           </div>
         </div>

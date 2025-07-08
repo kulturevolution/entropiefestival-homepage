@@ -16,7 +16,7 @@ export default async function Program({
   params: { locale: string };
 }) {
   const { t, resources } = await initTranslations(locale, i18nNamespaces);
-  const artistsData = await getArtistsData(locale);
+  const artistsData = await getArtistsData('de');
   const upcomingEventData = await getUpcomingEventData(locale);
 
   return (
