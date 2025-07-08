@@ -127,3 +127,17 @@ body {
   display: grid !important;
   justify-content: center;
 }
+
+.pretix-widget-voucher {
+  display: none;
+}
+
+.pretix-widget-action {
+  padding: 0 !important;
+}
+
+.pretix-widget-availability-gone {
+  word-wrap: anywhere;
+  max-width: 80px;
+  text-align: left;
+}
