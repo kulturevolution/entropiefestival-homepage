@@ -51,7 +51,7 @@ export default async function RootLayout({
             className='hidden object-cover lg:!fixed lg:block'
           />
           <Header locale={locale} />
-          <MainMenu locale={locale} />
+          <MainMenu locale={locale} showProgram={true} />
           <FooterMenu locale={locale} />
           <ContentContainer>{children}</ContentContainer>
         </body>

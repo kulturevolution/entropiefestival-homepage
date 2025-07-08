@@ -20,16 +20,16 @@ export async function getPageData(
 }
 
 export async function getPageDataByTitle(
-    title: string,
-    locale: string
+  title: string,
+  locale: string
 ): Promise<any> {
   const response = await fetch(
-      `${process.env.NEXT_CMS_API}/pages?filters[title][$eq]=${title}&locale=${locale}`,
-      {
-        headers: {
-          Authorization: `bearer ${process.env.NEXT_CMS_TOKEN}`,
-        },
-      }
+    `${process.env.NEXT_CMS_API}/pages?filters[title][$eq]=${title}&locale=${locale}`,
+    {
+      headers: {
+        Authorization: `bearer ${process.env.NEXT_CMS_TOKEN}`,
+      },
+    }
   );
 
   const result = await response.json();
@@ -39,4 +39,3 @@ export async function getPageDataByTitle(
     id: result?.data?.[0]?.id,
   };
 }
-
