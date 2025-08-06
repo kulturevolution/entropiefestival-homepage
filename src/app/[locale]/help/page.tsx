@@ -5,6 +5,7 @@ import PageContentBox from '@/components/layout/PageContentBox';
 import { getPageData } from '@/cms/page';
 import StrapiRichtext from '@/components/layout/StrapiRichtext';
 import SupporterForm from '@/components/pageComponents/SupporterForm';
+import { redirect } from 'next/navigation';
 
 const i18nNamespaces = ['common'];
 
@@ -15,7 +16,8 @@ export default async function Help({
 }: {
   params: { locale: string };
 }) {
-  const { t, resources } = await initTranslations(locale, i18nNamespaces);
+  return redirect(`/${locale}`);
+  /*const { t, resources } = await initTranslations(locale, i18nNamespaces);
   const pageData = await getPageData('supporter', locale);
 
   return (
@@ -60,7 +62,7 @@ export default async function Help({
         </PageContentBox>
       </main>
     </TranslationsProvider>
-  );
+  );*/
 }
 
 export function generateStaticParams() {

@@ -7,7 +7,9 @@ import { initializeDatabase } from '@/lib/db';
 let dbInitialized = false;
 
 export async function POST(request: NextRequest) {
-  if (!dbInitialized) {
+  return NextResponse.json({ error: 'registration closed' }, { status: 400 });
+
+  /*if (!dbInitialized) {
     dbInitialized = await initializeDatabase();
     if (!dbInitialized) {
       return NextResponse.json(
@@ -54,5 +56,5 @@ export async function POST(request: NextRequest) {
       { error: 'Server error processing your request' },
       { status: 500 }
     );
-  }
+  }*/
 }
