@@ -18,6 +18,8 @@ export default async function Tickets({
   const { t, resources } = await initTranslations(locale, i18nNamespaces);
   const upcomingEventData = await getUpcomingEventData(locale);
 
+  return null;
+
   return (
     <TranslationsProvider
       locale={locale}

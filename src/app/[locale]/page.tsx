@@ -42,14 +42,14 @@ export default async function Home({
               />
             ) : null}
           </div>
-          <div className='mt-6 text-center'>
+          {/*<div className='mt-6 text-center'>
             <Link
               href={`/${locale}/tickets`}
               className='rounded-[20px] border-2 border-white bg-primary px-8 py-2 text-[27px]/[39px] font-bold text-white transition-all hover:border-primary hover:bg-white hover:text-primary lg:px-20'
             >
               {t('buyTicket')}
             </Link>
-          </div>
+          </div>*/}
         </div>
       </main>
     </TranslationsProvider>
